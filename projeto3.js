@@ -283,7 +283,7 @@ function castelo(){
 
     if(resposta == 0){
    console.log(`Nosso guerreiro ${personagem.nome} se juntou ao mal e agora eles dominam a Turtle Village`)
-   
+   return true
    
 
 
@@ -329,8 +329,8 @@ if(personagem.vida==0){
     
     break
 }
-  castelo()
-  if(resposta == 0){
+  
+  if(castelo() == true){
       break
   }
 
