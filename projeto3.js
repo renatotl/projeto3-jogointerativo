@@ -87,15 +87,6 @@ let bloco2 = [
 ]
 
 
-//finaliza o jogo caso o jogador decida se juntar ao inimigo.
-function finalizarJogo(){
-    
-    return true
-}
-
-
-
-
 //Sorteios dos itens que podem ser ganhos nas batalhas
 function listaAleatoria(){
 let pc2 = Math.ceil(Math.random()*6)
@@ -292,9 +283,10 @@ function castelo(){
 
     if(resposta == 0){
    console.log(`Nosso guerreiro ${personagem.nome} se juntou ao mal e agora eles dominam a Turtle Village`)
-   finalizarJogo()
-
    
+   
+
+
     }else if (resposta == 1){
         aleatórios2()
         deathAdder.caracteristica2()
