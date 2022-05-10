@@ -54,6 +54,7 @@ menos1DeVida: function(){
     
 };
 
+//Para manipular o objeto foi usado o método que é a forma correta.
 // objeto inimigo
 let deathAdder = {
     nome: "Death Adder",
@@ -93,18 +94,6 @@ function finalizarJogo(){
 }
 
 
-
-fimDeJogo = () =>{
-    console.log(`Os dias acabaram ${personagem.nome} falhou! `)
-    return true
-}
-
-
-//caso seus pontos de vida chegue a zero
-dead = () =>{
-    console.log("Você foi derrotado GAME OVER! ")
-    return true
-}
 
 
 //Sorteios dos itens que podem ser ganhos nas batalhas
@@ -255,12 +244,13 @@ diaRegrecivo--
 }
 
 if(personagem.vida == 0){
-    dead()
+    console.log("Você foi derrotado GAME OVER! ")
+    
     break
 
 }
 if(diaRegrecivo == 0){
-    fimDeJogo()
+    console.log("Os dias acabaram GAME OVER! ")
     break
 }
 TurtleVillage()
@@ -282,7 +272,8 @@ while(diaRegrecivo>0){
     console.log(`Agora são:  ${horas.valorHora}:00 `)
 
     if(personagem.vida==0){
-        dead()
+        console.log("Você foi derrotado GAME OVER! ")
+    
         break
     }
 
@@ -303,6 +294,7 @@ function castelo(){
    console.log(`Nosso guerreiro ${personagem.nome} se juntou ao mal e agora eles dominam a Turtle Village`)
    finalizarJogo()
 
+   
     }else if (resposta == 1){
         aleatórios2()
         deathAdder.caracteristica2()
@@ -329,7 +321,8 @@ function castelo(){
 }
 
 if(diaRegrecivo == 0){
-    fimDeJogo()
+    console.log("Os dias acabaram GAME OVER! ")
+    
     break
 }
 
@@ -340,7 +333,8 @@ if (deathAdder.vida == 0){
 }
 
 if(personagem.vida==0){
-    dead()
+    console.log("Você foi derrotado GAME OVER! ")
+    
     break
 }
   castelo()
